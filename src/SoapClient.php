@@ -29,7 +29,7 @@ class SoapClient extends \SoapClient
 	}
 
 	/**
-	 * @param array $parameters
+	 * @param mixed[] $parameters
 	 * @return mixed
 	 */
 	public function OdeslaniTrzby(array $parameters)

@@ -6,6 +6,7 @@
 	<rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/ruleset.xml">
 		<exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameAfterKeyword"/>
 		<exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedExceptions"/>
+		<exclude name="SlevomatCodingStandard.Classes.ClassConstantVisibility.MissingConstantVisibility"/>
 	</rule>
 	<rule ref="SlevomatCodingStandard.Namespaces.UnusedUses">
 		<properties>
@@ -26,6 +27,15 @@
 		<properties>
 			<property name="allowUseFromRootNamespace" value="false" />
 			<property name="namespacesRequiredToUse" type="array" value="SlevomatEET" />
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration">
+		<properties>
+			<property name="enableNullableTypeHints" value="false"/>
+			<property name="enableVoidTypeHint" value="false"/>
+			<property name="usefulAnnotations" type="array" value="
+				@dataProvider
+			"/>
 		</properties>
 	</rule>
 	<rule ref="Squiz.Commenting.FunctionComment">
